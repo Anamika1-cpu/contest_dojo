@@ -17,15 +17,7 @@ var s = setInterval(function(){
 
 var tl = gsap.timeline();
 
-tl.to("#square", {
-    onStart: function(){
-      $('#top h6').textillate({ 
-        in: { 
-          effect: 'fadeInDown' }
-        });
-    }
-    
-  })
+
   tl.to("#top h6",{
     opacity:1
     })
@@ -35,15 +27,16 @@ tl.to("#square", {
     tl.from('#supertop',{
         y:0
     }) 
-    tl.from("#main",{
-        onStart: function(){
-            $('#nav a').textillate({ 
-              in: { 
-                effect: 'fadeInLeftBig' }
-              });
-          }
+   
+    tl.to("#square", {
+      onStart: function(){
+        $('#top h6').textillate({ 
+          in: { 
+            effect: 'fadeInDown' }
+          });
+      }
+      
     })
-
     
 var lerp = document.querySelector("#lerp");
 window.addEventListener("mousemove",function(dets){
